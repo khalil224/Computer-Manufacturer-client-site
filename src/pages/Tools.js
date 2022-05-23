@@ -4,6 +4,13 @@ const Tools = () => {
     return (
         <div>
             <h2>this is tools page</h2>
+            <h2>this is tools page</h2>
+            <h2>this is tools page</h2>
+            <h2>this is tools page</h2>
+            <h2>this is tools page</h2>
+            <h2>this is tools page</h2>
+            <h2>this is tools page</h2>
+            <h2>this is tools page</h2>
         </div>
     );
 };
