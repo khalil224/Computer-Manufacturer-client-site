@@ -1,0 +1,56 @@
+[
+    {
+        "id": 1,
+        "Name": "DeepCool ICE EDGE MINI FS V2.0 CPU Air Cooler",
+        "img": "https://i.ibb.co/gtnbzdg/Cooling-Fan.png",
+        "description": "DeepCool ICE EDGE MINI FS V2.0 CPU Air Cooler is AMD AM4 Ready. (NOTE: Refer to FM2+/ FM2/ FM1/ AM3+/ AM3/ AM2+/ AM2 for the manuals). It is equipped with multiple clips to support Intel LGA1155/ 1156/ 775 and AMD AM4/ AM3/ AM2+/ AM2/ K8. It has 2 sintered metal powder heatpipes directly contacting the CPU surface for removing heat and eliminating chances of overheating. It features specialized aluminum heatsink construction for efficient heat dissipation. TPE fan housing designed to absorb operating vibration and reduce fan noise. it has a 1-year warranty.",
+        "minimumOrderQuantity": "200",
+        "availableOrderQuantity": "10000",
+        "Price": "$7"
+    },
+    {
+        "id": 2,
+        "Name": "Western Digital 1TB Purple Surveillance HDD",
+        "img": "https://i.ibb.co/0Q3yVPG/HDD.png",
+        "description": "It is developed specifically for surveillance security systems. It offers us reduced video frame loss. Tuned for write-intensive, low bit-rate, high stream-count applications typical to most surveillance applications. Moreover, it prioritizes write-operations for maximized surveillance performance. Besides, Western Digital HDD gives the TLER & ATA streaming support, including support for up to eight drives.This Western Digital HDD comes with 02 years warranty.",
+        "minimumOrderQuantity": "100",
+        "availableOrderQuantity": "900",
+        "Price": "$40"
+    },
+    {
+        "id": 3,
+        "Name": "DeepCool ICE EDGE MINI FS V2.0 CPU Air Cooler",
+        "img": "https://i.ibb.co/3ck5gjZ/Graphics-Processing-Unit.jpg",
+        "description": "DeepCool ICE EDGE MINI FS V2.0 CPU Air Cooler is AMD AM4 Ready. (NOTE: Refer to FM2+/ FM2/ FM1/ AM3+/ AM3/ AM2+/ AM2 for the manuals). It is equipped with multiple clips to support Intel LGA1155/ 1156/ 775 and AMD AM4/ AM3/ AM2+/ AM2/ K8. It has 2 sintered metal powder heatpipes directly contacting the CPU surface for removing heat and eliminating chances of overheating. It features specialized aluminum heatsink construction for efficient heat dissipation. TPE fan housing designed to absorb operating vibration and reduce fan noise. it has a 1-year warranty.",
+        "minimumOrderQuantity": "200",
+        "availableOrderQuantity": "10000",
+        "Price": "$7"
+    },
+    {
+        "id": 4,
+        "Name": "DeepCool ICE EDGE MINI FS V2.0 CPU Air Cooler",
+        "img": "https://i.ibb.co/gtnbzdg/Cooling-Fan.png",
+        "description": "DeepCool ICE EDGE MINI FS V2.0 CPU Air Cooler is AMD AM4 Ready. (NOTE: Refer to FM2+/ FM2/ FM1/ AM3+/ AM3/ AM2+/ AM2 for the manuals). It is equipped with multiple clips to support Intel LGA1155/ 1156/ 775 and AMD AM4/ AM3/ AM2+/ AM2/ K8. It has 2 sintered metal powder heatpipes directly contacting the CPU surface for removing heat and eliminating chances of overheating. It features specialized aluminum heatsink construction for efficient heat dissipation. TPE fan housing designed to absorb operating vibration and reduce fan noise. it has a 1-year warranty.",
+        "minimumOrderQuantity": "200",
+        "availableOrderQuantity": "10000",
+        "Price": "$7"
+    },
+    {
+        "id": 5,
+        "Name": "DeepCool ICE EDGE MINI FS V2.0 CPU Air Cooler",
+        "img": "https://i.ibb.co/gtnbzdg/Cooling-Fan.png",
+        "description": "DeepCool ICE EDGE MINI FS V2.0 CPU Air Cooler is AMD AM4 Ready. (NOTE: Refer to FM2+/ FM2/ FM1/ AM3+/ AM3/ AM2+/ AM2 for the manuals). It is equipped with multiple clips to support Intel LGA1155/ 1156/ 775 and AMD AM4/ AM3/ AM2+/ AM2/ K8. It has 2 sintered metal powder heatpipes directly contacting the CPU surface for removing heat and eliminating chances of overheating. It features specialized aluminum heatsink construction for efficient heat dissipation. TPE fan housing designed to absorb operating vibration and reduce fan noise. it has a 1-year warranty.",
+        "minimumOrderQuantity": "200",
+        "availableOrderQuantity": "10000",
+        "Price": "$7"
+    },
+    {
+        "id": 6,
+        "Name": "DeepCool ICE EDGE MINI FS V2.0 CPU Air Cooler",
+        "img": "https://i.ibb.co/gtnbzdg/Cooling-Fan.png",
+        "description": "DeepCool ICE EDGE MINI FS V2.0 CPU Air Cooler is AMD AM4 Ready. (NOTE: Refer to FM2+/ FM2/ FM1/ AM3+/ AM3/ AM2+/ AM2 for the manuals). It is equipped with multiple clips to support Intel LGA1155/ 1156/ 775 and AMD AM4/ AM3/ AM2+/ AM2/ K8. It has 2 sintered metal powder heatpipes directly contacting the CPU surface for removing heat and eliminating chances of overheating. It features specialized aluminum heatsink construction for efficient heat dissipation. TPE fan housing designed to absorb operating vibration and reduce fan noise. it has a 1-year warranty.",
+        "minimumOrderQuantity": "200",
+        "availableOrderQuantity": "10000",
+        "Price": "$7"
+    }
+]

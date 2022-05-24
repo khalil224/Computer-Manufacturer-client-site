@@ -33,7 +33,7 @@ const Navbar = ({ children }) => {
 
                             <li ><NavLink to='/' className='rounded-lg'>HOME</NavLink></li>
                             {/* {admin && (<li ><NavLink to='/dashboard/add-service' className='rounded-lg'>Dashboard</NavLink></li>)} */}
-                            <li><NavLink to='/tools' className='rounded-lg'>TOOLS</NavLink></li>
+
                             <li><NavLink to='/reviews' className='rounded-lg'>REVIEWS</NavLink></li>
                             <li><NavLink to='/business-summary' className='rounded-lg'>BUSINESS SUMMARY</NavLink></li>
                             <li><NavLink to='/blogs' className='rounded-lg'>BLOGS</NavLink></li>
@@ -78,7 +78,7 @@ const Navbar = ({ children }) => {
 
                     <li ><NavLink to='/' className='rounded-lg'>HOME</NavLink></li>
 
-                    <li><NavLink to='/tools' className='rounded-lg'>TOOLS</NavLink></li>
+
                     <li><NavLink to='/reviews' className='rounded-lg'>REVIEWS</NavLink></li>
                     <li><NavLink to='/business-summary' className='rounded-lg'>BUSINESS SUMMARY</NavLink></li>
                     <li><NavLink to='/blogs' className='rounded-lg'>BLOGS</NavLink></li>

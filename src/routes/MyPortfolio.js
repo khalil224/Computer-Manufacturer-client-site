@@ -13,7 +13,9 @@ const MyPortfolio = () => {
                     </p>
                     <p className='font-bold'> Educational Background: <span>Currently studying B.Sc. honours  major in Mathematics at Jahangirnagar University, Savar, Dhaka.  </span></p>
                     <p className='font-bold'>List of technologies: C, C++, MATLAB, HTML,CSS,Bootstrap,Tailwind Css, Javascript, React, NodeJs,Mongodb,Data Structure etc. </p>
-                    <p className='font-bold'>Website Link: </p>
+                    <p className='font-bold'>Website Link: 1. https://bd-mobile-mart.web.app/ <br />
+                        2. https://family-wellness-center-c7004.web.app/
+                        3.   </p>
                 </div>
             </div>
         </div>
