@@ -31,8 +31,8 @@ const SignUp = () => {
         console.log(data);
         await createUserWithEmailAndPassword(data.email, data.password)
         await updateProfile({ displayName: data.name });
-        navigate('/appointment')
-        alert('Updated profile');
+
+
     }
 
     if (loading || gLoading || updating) {

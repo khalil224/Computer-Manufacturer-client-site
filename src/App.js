@@ -8,6 +8,7 @@ import Footer from './components/Footer';
 import Navbar from './components/Navbar';
 import Blogs from './pages/Blogs';
 import BusinessSummary from './pages/BusinessSummary';
+import Dashboard from './pages/Dashboard/Dashboard';
 
 import Home from './pages/Home/Home';
 import NotFound from './pages/NotFound';
@@ -28,6 +29,7 @@ function App() {
           <Route path='/blogs' element={<Blogs></Blogs>}></Route>
           <Route path='/login' element={<Login></Login>}></Route>
           <Route path='/signup' element={<Register></Register>}></Route>
+          <Route path='/dashboard' element={<Dashboard></Dashboard>}></Route>
           <Route path='/my-portfolio' element={<PrivateAuth><MyPortfolio></MyPortfolio></PrivateAuth>}></Route>
           <Route path='*' element={<NotFound></NotFound>}></Route>
         </Routes>
