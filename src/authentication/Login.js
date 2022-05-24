@@ -7,7 +7,7 @@ import Loading from '../pages/Loading';
 
 const Login = () => {
 
-    const [signInWithGoogle, gUser, gLoading, gError] = useSignInWithGoogle(auth);
+    const [signInWithGoogle, googleUser, googleLoading, googleError] = useSignInWithGoogle(auth);
     const { register, formState: { errors }, handleSubmit } = useForm();
 
     const [
@@ -32,15 +32,15 @@ const Login = () => {
         signInWithEmailAndPassword(data.email, data.password)
     }
 
-    if (loading || gLoading) {
+    if (loading || googleLoading) {
         return <Loading></Loading>
     }
 
-    if (error || gError) {
-        signInError = <p className='text-red-500'>{error?.message || gError.message}</p>
+    if (error || googleError) {
+        signInError = <p className='text-red-500'>{error?.message || googleError.message}</p>
     }
 
-    if (user || gUser) {
+    if (user || googleUser) {
         navigate(from, { replace: true });
 
     }

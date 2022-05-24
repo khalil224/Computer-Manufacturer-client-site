@@ -2,6 +2,7 @@
 import { Route, Routes } from 'react-router-dom';
 import './App.css';
 import Login from './authentication/Login';
+import PrivateAuth from './authentication/PrivateAuth';
 import Register from './authentication/Register';
 import Footer from './components/Footer';
 import Navbar from './components/Navbar';
@@ -27,7 +28,7 @@ function App() {
           <Route path='/blogs' element={<Blogs></Blogs>}></Route>
           <Route path='/login' element={<Login></Login>}></Route>
           <Route path='/signup' element={<Register></Register>}></Route>
-          <Route path='/my-portfolio' element={<MyPortfolio></MyPortfolio>}></Route>
+          <Route path='/my-portfolio' element={<PrivateAuth><MyPortfolio></MyPortfolio></PrivateAuth>}></Route>
           <Route path='*' element={<NotFound></NotFound>}></Route>
         </Routes>
       </Navbar>
