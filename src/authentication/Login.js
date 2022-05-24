@@ -1,9 +1,8 @@
 import React from 'react';
 import { useSignInWithEmailAndPassword, useSignInWithGoogle } from 'react-firebase-hooks/auth';
-import auth from '../../firebase.init';
 import { useForm } from "react-hook-form";
-
 import { useLocation, useNavigate } from 'react-router-dom';
+import auth from '../firebase.init';
 import Loading from '../pages/Loading';
 
 const Login = () => {
@@ -50,7 +49,7 @@ const Login = () => {
         <div className='flex h-screen justify-center items-center '>
             <div className="card w-96 bg-base-100 shadow-xl">
                 <div className="card-body">
-                    <h2 className="text-center text-2xl font-bold ">Login</h2>
+                    <h2 className="text-center text-2xl font-bold text-primary ">LOGIN</h2>
 
                     <form onSubmit={handleSubmit(onSubmit)}>
 
@@ -99,9 +98,9 @@ const Login = () => {
                             </label >
                         </div >
                         {signInError}
-                        < input className='btn w-full max-w-xs ' type="submit" value="Login" />
+                        < input className='btn w-full max-w-xs btn-primary' type="submit" value="Login" />
                     </form >
-                    <p>New to doctors portal?<span onClick={navigateSignUp} className='text-secondary pl-2 cursor-pointer'>Create a New Account</span></p>
+                    <p>New to Computing Cafe?<span onClick={navigateSignUp} className='text-secondary pl-2 cursor-pointer'>Create a New Account</span></p>
                     <div className="divider" > OR</div >
                     <button
                         onClick={() => signInWithGoogle()}

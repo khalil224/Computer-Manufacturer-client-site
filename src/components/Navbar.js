@@ -1,5 +1,8 @@
+import { signOut } from 'firebase/auth';
 import React, { useState } from 'react';
+import { useAuthState } from 'react-firebase-hooks/auth';
 import { NavLink, useLocation } from 'react-router-dom';
+import auth from '../firebase.init';
 //import useAdmin from '../hooks/useAdmin';
 
 
@@ -10,6 +13,12 @@ const Navbar = ({ children }) => {
     const { pathname } = useLocation();
 
     //const [admin] = useAdmin();
+
+    const [user, loading, error] = useAuthState(auth);
+
+    const SignOut = () => {
+        signOut(auth)
+    }
 
     return (
         <div class="drawer drawer-end" data-theme={dark ? "dark" : "light"}>
@@ -37,16 +46,11 @@ const Navbar = ({ children }) => {
                             <li><NavLink to='/reviews' className='rounded-lg'>REVIEWS</NavLink></li>
                             <li><NavLink to='/business-summary' className='rounded-lg'>BUSINESS SUMMARY</NavLink></li>
                             <li><NavLink to='/blogs' className='rounded-lg'>BLOGS</NavLink></li>
-                            <li><NavLink to='/login' className='rounded-lg'>LOGIN</NavLink></li>
                             <li><NavLink to='/my-portfolio' className='rounded-lg'>MY PORTFOLIO</NavLink></li>
+                            <li>{user ? <button onClick={SignOut} className="btn btn-ghost">Sign Out</button> : <NavLink to='/login' className='rounded-lg'>LOGIN</NavLink>}</li>
 
-                            <li className='dropdown dropdown-hover dropdown-end '>
-                                <label tabindex="0" class="btn btn-outline btn-primary rounded-lg gap-x-2">BOOK NOW</label>
-                                <ul tabindex="0" class="dropdown-content menu p-2 shadow bg-base-100 rounded-box w-52">
-                                    <li><a>Quick Book</a></li>
-                                    <li><a>Pre Book</a></li>
-                                </ul>
-                            </li>
+
+
                             <label class='swap swap-rotate'>
                                 <input type='checkbox' onClick={() => setDark(!dark)} />
 
@@ -82,17 +86,10 @@ const Navbar = ({ children }) => {
                     <li><NavLink to='/reviews' className='rounded-lg'>REVIEWS</NavLink></li>
                     <li><NavLink to='/business-summary' className='rounded-lg'>BUSINESS SUMMARY</NavLink></li>
                     <li><NavLink to='/blogs' className='rounded-lg'>BLOGS</NavLink></li>
-                    <li><NavLink to='/login' className='rounded-lg'>LOGIN</NavLink></li>
                     <li><NavLink to='/my-portfolio' className='rounded-lg'>MY PORTFOLIO</NavLink></li>
-                    <div tabindex="0" class="collapse collapse-arrow border border-base-300 bg-base-100 rounded-box">
-                        <div class="collapse-title text-xl font-medium">
-                            Book Now
-                        </div>
-                        <div class="collapse-content">
-                            <li><NavLink to='/contact' className='rounded-lg'>Quick Bookt</NavLink></li>
-                            <li><NavLink to='/login' className='rounded-lg'>Pre Book</NavLink></li>
-                        </div>
-                    </div>
+                    <li>{user ? <button onClick={SignOut} className="btn btn-ghost">Sign Out</button> : <NavLink to='/login' className='rounded-lg'>LOGIN</NavLink>}</li>
+
+
                 </ul>
 
             </div>
