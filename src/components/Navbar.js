@@ -42,15 +42,12 @@ const Navbar = ({ children }) => {
 
                             <li ><NavLink to='/' className='rounded-lg'>HOME</NavLink></li>
                             <li><NavLink to='/reviews' className='rounded-lg'>REVIEWS</NavLink></li>
-                            <li><NavLink to='/business-summary' className='rounded-lg'>BUSINESS SUMMARY</NavLink></li>
                             <li><NavLink to='/blogs' className='rounded-lg'>BLOGS</NavLink></li>
                             {user && (<li ><NavLink to='/dashboard' className='rounded-lg'>DASHBOARD</NavLink></li>)}
                             <li><NavLink to='/my-portfolio' className='rounded-lg'>MY PORTFOLIO</NavLink></li>
                             <li>{user ? <button onClick={SignOut} className="btn btn-ghost">Sign Out</button> : <NavLink to='/login' className='rounded-lg'>LOGIN</NavLink>}</li>
                             <li>
-
                                 {user && <p className='rounded-lg text-xl'>{user.displayName}</p>}
-
                             </li>
 
 
@@ -85,13 +82,14 @@ const Navbar = ({ children }) => {
                 <ul class="menu p-4 overflow-y-auto w-80 bg-base-100  gap-y-2">
 
                     <li ><NavLink to='/' className='rounded-lg'>HOME</NavLink></li>
-
-
                     <li><NavLink to='/reviews' className='rounded-lg'>REVIEWS</NavLink></li>
-                    <li><NavLink to='/business-summary' className='rounded-lg'>BUSINESS SUMMARY</NavLink></li>
                     <li><NavLink to='/blogs' className='rounded-lg'>BLOGS</NavLink></li>
+                    {user && (<li ><NavLink to='/dashboard' className='rounded-lg'>DASHBOARD</NavLink></li>)}
                     <li><NavLink to='/my-portfolio' className='rounded-lg'>MY PORTFOLIO</NavLink></li>
                     <li>{user ? <button onClick={SignOut} className="btn btn-ghost">Sign Out</button> : <NavLink to='/login' className='rounded-lg'>LOGIN</NavLink>}</li>
+                    <li>
+                        {user && <p className='rounded-lg text-xl'>{user.displayName}</p>}
+                    </li>
 
 
                 </ul>

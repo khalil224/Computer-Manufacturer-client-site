@@ -7,7 +7,7 @@ const Footer = () => {
 
     return (
         <div>
-            <footer class="footer p-10 bg-neutral text-neutral-content vh-100">
+            <footer class="footer p-10 bg-neutral text-neutral-content mb-0">
                 <div>
                     <span class="footer-title">Customer Service</span>
                     <a class="link link-hover">Check Order Status</a>
