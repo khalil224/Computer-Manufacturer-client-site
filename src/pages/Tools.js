@@ -1,14 +1,19 @@
 import React, { useEffect, useState } from 'react';
+import fetcher from '../api/Fetcher';
 import Tool from './Home/Tool';
 
 const Tools = () => {
     const [parts, setParts] = useState([]);
     console.log(parts)
     useEffect(() => {
-        fetch("partsData.json")
-            .then(res => res.json())
-            .then(data => setParts(data))
-    }, [])
+        // fetch("fetcher")
+        //     .then(res => res.json())
+        //     .then(data => setParts(data))
+        (async () => {
+            const res = await fetcher.get('/tool');
+            setParts(res.data)
+        })();
+    }, []);
 
 
     return (
