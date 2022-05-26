@@ -65,7 +65,7 @@ const PurchasePage = () => {
                     <img src={tool.img} alt='' class="max-w-sm rounded-lg shadow-2xl" />
                     <div>
                         <h1 class="text-3xl font-bold">{tool.Name}</h1>
-                        <p class="py-3 font-semibold">{tool.description}</p>
+                        <p class="py-3 font-semibold">{tool.detailDescription}</p>
                         <p className='font-bold'>Price:{tool.Price}</p>
                         <p className='font-bold'>Minimum Order Quantity: {tool.minimumOrderQuantity}</p>
                         <p className='font-bold'>Available Quantity: {tool.availableOrderQuantity}</p>
