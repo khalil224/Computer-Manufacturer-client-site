@@ -1,24 +1,36 @@
 
 import { useEffect, useState } from 'react';
+import { useQuery } from 'react-query';
 import fetcher from '../../api/Fetcher';
+import Loading from '../Loading';
 import User from './User';
 
 const AllUsers = () => {
 
-    const [users, setUsers] = useState([]);
+    // const [users, setUsers] = useState([]);
 
-    useEffect(() => {
+    // useEffect(() => {
 
-        (async () => {
-            const res = await fetcher.get(`/user`, {
-                method: 'GET',
-                headers: {
-                    authorization: `Bearer ${localStorage.getItem('accessToken')}`
-                }
-            });
-            setUsers(res.data)
-        })();
-    }, []);
+    //     (async () => {
+    //         const res = await fetcher.get(`/user`, {
+    //             method: 'GET',
+    //             headers: {
+    //                 authorization: `Bearer ${localStorage.getItem('accessToken')}`
+    //             }
+    //         });
+    //         setUsers(res.data)
+    //     })();
+    // }, []);
+
+    const { data: users, isLoading, refetch } = useQuery('users', () => fetch('http://localhost:5000/user', {
+        method: 'GET',
+        headers: {
+            authorization: `Bearer ${localStorage.getItem('accessToken')}`
+        }
+    }).then(res => res.json()));
+    if (isLoading) {
+        return <Loading></Loading>
+    }
 
     console.log(users.email)
 
@@ -38,7 +50,9 @@ const AllUsers = () => {
                     </thead>
                     <tbody>
                         {
-                            users.map(user => <User key={users._id} user={user}></User>
+                            users.map(user => <User key={users._id} user={user}
+                                refetch={refetch}
+                            ></User>
 
                             )
 

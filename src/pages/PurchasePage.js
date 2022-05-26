@@ -44,7 +44,7 @@ const PurchasePage = () => {
     }
 
 
-    const handleBooking = (e) => {
+    const handleOrder = (e) => {
         e.preventDefault();
 
         const order = {
@@ -97,7 +97,7 @@ const PurchasePage = () => {
             <div className='flex justify-center items-center'>
                 <div className="card w-96 bg-base-100 shadow-xl">
                     <div className="card-body">
-                        <form onSubmit={handleBooking} >
+                        <form onSubmit={handleOrder} >
                             <h2 className='text-center my-3 text-3xl font-bold text-primary underline'>PURCHASE FIELD</h2>
                             <div className='text-center '><span>
                                 {Count > tool.availableOrderQuantity ? <button className='btn btn-primary mr-3' disabled onClick={() => increment(Count)}>Increase <br />Order <br />Quantity</button> :

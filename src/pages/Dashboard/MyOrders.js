@@ -1,10 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
+import { toast } from 'react-toastify';
 import fetcher from '../../api/Fetcher';
 import auth from '../../firebase.init';
 
 const MyOrders = () => {
+    const { id } = useParams()
     const [user] = useAuthState(auth);
     const [orders, setOrders] = useState([]);
     console.log(orders)
@@ -28,6 +30,21 @@ const MyOrders = () => {
 
     }, [user]);
 
+
+    // const handleDelete = () => {
+    //     fetch(`http://localhost:5000/order/${id}`, {
+    //         method: 'DELETE',
+    //         headers: {
+    //             authorization: `Bearer ${localStorage.getItem('accessToken')}`
+    //         }
+    //     })
+    //         .then(res => res.json())
+    //         .then(data => {
+    //             console.log(data);
+
+    //         })
+    // }
+
     return (
         <div >
             <div class="overflow-x-auto">
@@ -37,8 +54,13 @@ const MyOrders = () => {
                         <tr>
                             <th></th>
                             <th>Name</th>
-                            <th>Email</th>
+
                             <th>PartsName</th>
+                            <th>Quantity</th>
+                            <th>Cancel Order</th>
+
+
+
                         </tr>
                     </thead>
                     <tbody>
@@ -48,8 +70,10 @@ const MyOrders = () => {
                                 <tr key={order._id}>
                                     <th>{index + 1}</th>
                                     <td>{order.UserName}</td>
-                                    <td>{order.userEmail}</td>
                                     <td>{order.toolName}</td>
+                                    <td>{order.OrderQuantity}</td>
+                                    <td><button class="btn btn-xs">Delete</button></td>
+
                                 </tr>
                             )
                         }
