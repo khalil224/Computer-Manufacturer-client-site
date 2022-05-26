@@ -1,5 +1,7 @@
 # Website Name: The Computing Cafe
-# Live Website Link: 
+# Live Website Link: https://the-computing-cafe.web.app/
+# Client Side Repository: https://github.com/programming-hero-web-course1/manufacturer-website-client-side-khalil224
+# Server Sife Repository: https://github.com/programming-hero-web-course1/manufacturer-website-server-side-khalil224
 # Features and Functionalities of my website: 
 * I've installed tailwindcss,daisyui and import many component from daisyui
 * I've installed react router,react-hook-form and use react hook form to make form and submit value

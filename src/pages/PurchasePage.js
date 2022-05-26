@@ -57,7 +57,7 @@ const PurchasePage = () => {
 
         }
 
-        fetch(`http://localhost:5000/order`, {
+        fetch(`https://the-computing-cafe.web.app/order`, {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

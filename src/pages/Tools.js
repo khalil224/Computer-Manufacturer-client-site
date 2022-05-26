@@ -8,7 +8,7 @@ const Tools = () => {
     //const [parts, setParts] = useState([]);
 
 
-    const { data: parts, isLoading } = useQuery('tool', () => fetch('http://localhost:5000/tool')
+    const { data: parts, isLoading } = useQuery('tool', () => fetch('https://the-computing-cafe.web.app/tool')
         .then(res => res.json())
     )
     if (isLoading) {

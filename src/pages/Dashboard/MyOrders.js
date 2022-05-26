@@ -32,7 +32,7 @@ const MyOrders = () => {
 
 
     // const handleDelete = () => {
-    //     fetch(`http://localhost:5000/order/${id}`, {
+    //     fetch(`https://the-computing-cafe.web.app/order/${id}`, {
     //         method: 'DELETE',
     //         headers: {
     //             authorization: `Bearer ${localStorage.getItem('accessToken')}`
