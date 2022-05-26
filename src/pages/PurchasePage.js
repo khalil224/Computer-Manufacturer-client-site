@@ -3,6 +3,9 @@ import { useParams } from 'react-router-dom';
 import fetcher from '../api/Fetcher';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import auth from '../firebase.init';
+import { toast } from 'react-toastify';
+import Tools from './Tools';
+
 
 const PurchasePage = () => {
     const { id } = useParams();
@@ -10,29 +13,6 @@ const PurchasePage = () => {
 
     const [tool, setTool] = useState([]);
     const [Count, setCount] = useState(0)
-    console.log(user)
-
-    const handleBooking = (e) => {
-        e.preventDefault();
-
-        const order = {
-
-        }
-
-        fetch('http://localhost:5000/booking', {
-            method: 'POST',
-            headers: {
-                'content-type': 'application/json'
-            },
-            body: JSON.stringify(order)
-        })
-            .then(res => res.json())
-            .then(data => {
-                console.log(data)
-
-
-            })
-    }
 
     useEffect(() => {
 
@@ -63,6 +43,42 @@ const PurchasePage = () => {
 
     }
 
+
+    const handleBooking = (e) => {
+        e.preventDefault();
+
+        const order = {
+            toolId: tool._id,
+            toolName: tool.Name,
+            UserName: user.displayName,
+            userEmail: user.email,
+            phone: e.target.phone.value,
+            OrderQuantity: Count
+
+        }
+
+        fetch(`http://localhost:5000/order`, {
+            method: 'POST',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(order)
+        })
+            .then(res => res.json())
+            .then(data => {
+                console.log(data)
+                if (data.success) {
+                    toast(`Your Order is Successfully Submitted.`)
+                }
+                else {
+                    toast('already exist')
+                }
+            })
+
+    }
+
+
+
     return (
 
         <div className='mb-24'>
@@ -84,7 +100,7 @@ const PurchasePage = () => {
                         <form onSubmit={handleBooking} >
                             <h2 className='text-center my-3 text-3xl font-bold text-primary underline'>PURCHASE FIELD</h2>
                             <div className='text-center '><span>
-                                {Count > tool.availableOrderQuantity ? <button className='btn btn-primary mr-3' disabled onClick={increment}>Increase <br />Order <br />Quantity</button> :
+                                {Count > tool.availableOrderQuantity ? <button className='btn btn-primary mr-3' disabled onClick={() => increment(Count)}>Increase <br />Order <br />Quantity</button> :
                                     <button className='btn btn-primary mr-3' onClick={increment}>Increase <br />Order <br />Quantity</button>}{Count}
                                 {Count < tool.minimumOrderQuantity ? <button className='btn btn-primary ml-3 :' disabled onClick={decrement}>Decrease <br />Order <br />Quantity</button> :
                                     <button className='btn btn-primary ml-3' onClick={decrement}>Decrease <br />Order <br />Quantity</button>}</span></div>
@@ -93,11 +109,12 @@ const PurchasePage = () => {
                             <input type="text" name='email' disabled value={user?.email || ''} class="input input-bordered w-full max-w-lg my-3" />
                             <input type="text" name='phone' placeholder="Phone Number" class="input input-bordered w-full max-w-lg my-3" />
                             {<input type="text" name='address' placeholder="Your Address" class="input input-bordered w-full max-w-lg my-3" />}
-                            <input type="submit" value="SUBMIT" class="btn btn-primary w-full max-w-lg my-3" />
+                            <input type="submit" value="PURCHASE" class="btn btn-primary w-full max-w-lg my-3" />
                         </form>
                     </div>
                 </div>
             </div>
+
         </div>
     );
 };

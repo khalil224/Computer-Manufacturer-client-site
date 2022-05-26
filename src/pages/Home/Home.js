@@ -12,7 +12,7 @@ const Home = () => {
 
 
     return (
-        <div>
+        <div className='mt-24'>
             <TopBanner></TopBanner>
             <h3 className='mt-10 text-3xl font-bold text-center text-primary underline'>TODAY'S BEST DEALS</h3>
             <Tools></Tools>

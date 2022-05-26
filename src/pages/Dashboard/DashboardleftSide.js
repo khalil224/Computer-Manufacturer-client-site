@@ -5,7 +5,7 @@ const DashboardleftSide = ({ children }) => {
     return (
         <div class="drawer drawer-mobile mt-16">
             <input id="my-drawer-2" type="checkbox" class="drawer-toggle" />
-            <div class="drawer-content flex flex-col items-center justify-center">
+            <div class="drawer-content ">
                 {children}
             </div>
             <div class="drawer-side">
@@ -15,6 +15,7 @@ const DashboardleftSide = ({ children }) => {
                     <li><NavLink to='/dashboard/add-order'>MY ORDERS</NavLink></li>
                     <li><NavLink to='/dashboard/add-review'>ADD A REVIEW</NavLink></li>
                     <li><NavLink to='/dashboard/my-profile'>MY PROFILE</NavLink></li>
+                    <li><NavLink to='/dashboard/user'>ALL USERS</NavLink></li>
                 </ul>
 
             </div>

@@ -18,10 +18,13 @@ import PurchasePage from './pages/PurchasePage';
 import Reviews from './pages/Reviews';
 import Tools from './pages/Tools';
 import MyPortfolio from './routes/MyPortfolio';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import AllUsers from './pages/Dashboard/AllUsers';
 
 function App() {
   return (
-    <div className='ml-10 mr-10'>
+    <div >
       <Navbar>
 
         <Routes>
@@ -37,6 +40,7 @@ function App() {
             <Route path='add-review' element={<AddReview></AddReview>}></Route>
             <Route path='add-order' element={<MyOrders></MyOrders>}></Route>
             <Route path='my-profile' element={<MyProfile></MyProfile>}></Route>
+            <Route path='user' element={<AllUsers></AllUsers>}></Route>
           </Route>
           <Route path='/my-portfolio' element={<MyPortfolio></MyPortfolio>}></Route>
           <Route path='*' element={<NotFound></NotFound>}></Route>
@@ -44,6 +48,7 @@ function App() {
       </Navbar>
 
       <Footer></Footer>
+      <ToastContainer />
     </div>
   );
 }
