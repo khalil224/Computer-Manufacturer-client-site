@@ -8,7 +8,7 @@ const User = ({ user, refetch }) => {
     console.log(email)
 
     const makeAdmin = () => {
-        fetch(`https://the-computing-cafe.web.app/user/admin/${email}`, {
+        fetch(`https://pacific-tor-22531.herokuapp.com/user/admin/${email}`, {
             method: 'PUT',
             headers: {
                 authorization: `Bearer ${localStorage.getItem('accessToken')}`

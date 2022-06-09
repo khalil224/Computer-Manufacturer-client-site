@@ -32,7 +32,7 @@ const MyOrders = () => {
 
 
     // const handleDelete = () => {
-    //     fetch(`https://the-computing-cafe.web.app/order/${id}`, {
+    //     fetch(`https://pacific-tor-22531.herokuapp.com/order/${id}`, {
     //         method: 'DELETE',
     //         headers: {
     //             authorization: `Bearer ${localStorage.getItem('accessToken')}`

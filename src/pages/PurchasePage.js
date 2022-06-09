@@ -57,7 +57,7 @@ const PurchasePage = () => {
 
         }
 
-        fetch(`https://the-computing-cafe.web.app/order`, {
+        fetch(`https://pacific-tor-22531.herokuapp.com/order`, {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
@@ -101,9 +101,9 @@ const PurchasePage = () => {
                             <h2 className='text-center my-3 text-3xl font-bold text-primary underline'>PURCHASE FIELD</h2>
                             <div className='text-center '><span>
                                 {Count > tool.availableOrderQuantity ? <button className='btn btn-primary mr-3' disabled onClick={() => increment(Count)}>Increase <br />Order <br />Quantity</button> :
-                                    <button className='btn btn-primary mr-3' onClick={increment}>Increase <br />Order <br />Quantity</button>}{Count}
+                                    <button type='button' className='btn btn-primary mr-3' onClick={increment}>Increase <br />Order <br />Quantity</button>}{Count}
                                 {Count < tool.minimumOrderQuantity ? <button className='btn btn-primary ml-3 :' disabled onClick={decrement}>Decrease <br />Order <br />Quantity</button> :
-                                    <button className='btn btn-primary ml-3' onClick={decrement}>Decrease <br />Order <br />Quantity</button>}</span></div>
+                                    <button type='button' className='btn btn-primary ml-3' onClick={decrement}>Decrease <br />Order <br />Quantity</button>}</span></div>
                             {Error}
                             <input type="text" name="name" disabled value={user?.displayName || ''} class="input input-bordered w-full max-w-lg my-3" />
                             <input type="text" name='email' disabled value={user?.email || ''} class="input input-bordered w-full max-w-lg my-3" />

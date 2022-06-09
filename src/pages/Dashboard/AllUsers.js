@@ -22,7 +22,7 @@ const AllUsers = () => {
     //     })();
     // }, []);
 
-    const { data: users, isLoading, refetch } = useQuery('users', () => fetch('https://the-computing-cafe.web.app/user', {
+    const { data: users, isLoading, refetch } = useQuery('users', () => fetch('https://pacific-tor-22531.herokuapp.com/user', {
         method: 'GET',
         headers: {
             authorization: `Bearer ${localStorage.getItem('accessToken')}`
